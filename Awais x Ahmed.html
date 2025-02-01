@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awais x Ahmed - Sell Courses Online</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 10px 0 0;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      font-size: 1rem;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #2575fc;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+
+    .hero .btn {
+      background: #2575fc;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .hero .btn:hover {
+      background: #6a11cb;
+    }
+
+    /* Course Section */
+    .courses {
+      padding: 60px 0;
+    }
+
+    .courses h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .course-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .course-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .course-card .info {
+      padding: 20px;
+    }
+
+    .course-card h3 {
+      font-size: 1.5rem;
+      margin: 0 0 10px;
+    }
+
+    .course-card p {
+      font-size: 1rem;
+      color: #666;
+      margin: 0 0 20px;
+    }
+
+    .course-card .price {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #2575fc;
+    }
+
+    .course-card .btn {
+      display: inline-block;
+      background: #2575fc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .course-card .btn:hover {
+      background: #6a11cb;
+    }
+
+    /* Testimonial Section */
+    .testimonials {
+      background: #f9f9f9;
+      padding: 60px 0;
+    }
+
+    .testimonials h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .testimonial-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-card p {
+      font-size: 1rem;
+      color: #666;
+      margin: 0 0 20px;
+    }
+
+    .testimonial-card .author {
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Awais x Ahmed</h1>
+      <p>Your gateway to mastering new skills</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <div class="logo">Awais x Ahmed</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2>Start Your Learning Journey Today</h2>
+      <p>Explore our wide range of courses designed to help you succeed.</p>
+      <a href="#" class="btn">Browse Courses</a>
+    </div>
+  </section>
+
+  <!-- Course Section -->
+  <section class="courses container">
+    <h2>Featured Courses</h2>
+    <div class="course-grid">
+      <!-- Course Card 1 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/300x200" alt="Graphic Design">
+        <div class="info">
+          <h3>Graphic Design Basics</h3>
+          <p>Learn the fundamentals of graphic design and create stunning visuals.</p>
+          <p class="price">$49.99</p>
+          <a href="#" class="btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <!-- Course Card 2 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/300x200" alt="Web Development">
+        <div class="info">
+          <h3>Web Development</h3>
+          <p>Master HTML, CSS, and JavaScript to build modern websites.</p>
+          <p class="price">$59.99</p>
+          <a href="#" class="btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <!-- Course Card 3 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/300x200" alt="Data Science">
+        <div class="info">
+          <h3>Data Science</h3>
+          <p>Learn data analysis, machine learning, and visualization techniques.</p>
+          <p class="price">$69.99</p>
+          <a href="#" class="btn">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>What Our Students Say</h2>
+      <div class="testimonial-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <p>"Awais x Ahmed helped me land my dream job in web development. Highly recommended!"</p>
+          <p class="author">- ahsan x rizwan</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <p>"The courses are well-structured and easy to follow. I learned so much!"</p>
+          <p class="author">- abdullah salam</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <p>"Excellent platform for learning new skills. The instructors are amazing!"</p>
+          <p class="author">- Saba T</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 E-commerce with awais. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
